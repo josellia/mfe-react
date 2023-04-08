@@ -49,7 +49,8 @@
       "imports": {
         "@deva/root-config": "//localhost:9000/deva-root-config.js",
         "@deva/app-header": "//localhost:8100/deva-app-header.js",
-        "@deva/app-footer": "//localhost:8110/deva-app-footer.js"
+        "@deva/app-footer": "//localhost:8110/deva-app-footer.js",
+        "@deva/app-shop": "//localhost:8111/deva-app-shop.js"
       }
     }
   </script>
@@ -75,15 +76,21 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <main>
-    <route default>
-      <application name="@deva/app-header"></application>
-    </route>
-    <route default>
-      <application name="@deva/app-footer"></application>
-    </route>
+    <header>
+      <route default>
+        <application name="@deva/app-header"></application>
+      </route>
+    </header>
+  
     <route path="app1">
       <application name="@deva/app-shop"></application>
     </route>
+
+    <footer>
+      <route default>
+        <application name="@deva/app-footer"></application>
+      </route>
+    </footer>
   </main>
   <script>
     System.import('@deva/root-config');
