@@ -32,7 +32,9 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react" : "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"
       }
     }
   </script>
@@ -45,7 +47,9 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@deva/root-config": "//localhost:9000/deva-root-config.js"
+        "@deva/root-config": "//localhost:9000/deva-root-config.js",
+        "@deva/app-header": "//localhost:8100/deva-app-header.js",
+        "@deva/app-footer": "//localhost:8110/deva-app-footer.js"
       }
     }
   </script>
@@ -70,7 +74,17 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <main></main>
+  <main>
+    <route default>
+      <application name="@deva/app-header"></application>
+    </route>
+    <route default>
+      <application name="@deva/app-footer"></application>
+    </route>
+    <route path="app1">
+      <application name="@deva/app-shop"></application>
+    </route>
+  </main>
   <script>
     System.import('@deva/root-config');
   </script>
