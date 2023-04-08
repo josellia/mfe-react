@@ -50,7 +50,13 @@
         "@deva/root-config": "//localhost:9000/deva-root-config.js",
         "@deva/app-header": "//localhost:8100/deva-app-header.js",
         "@deva/app-footer": "//localhost:8110/deva-app-footer.js",
-        "@deva/app-shop": "//localhost:8111/deva-app-shop.js"
+        "@deva/app-shop": "//localhost:8300/deva-app-shop.js",
+        "@deva/app-app-account": "//localhost:8310/deva-app-account.js",
+        "@deva/app-app-cart": "//localhost:8320/deva-app-cart.js",
+        "@deva/app-app-product": "//localhost:8330/deva-app-product.js",
+        "@deva/app-app-cart": "//localhost:8340/deva-app-cart.js",
+        "@deva/app-util-state": "//localhost:8500/deva-util-state.js",
+        "@deva/app-util-ui": "//localhost:8510/deva-util-ui.js"
       }
     }
   </script>
@@ -76,10 +82,8 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <main>
-    <header>
-      <route default>
-        <application name="@deva/app-header"></application>
-      </route>
+    <!-- <header>
+        <application name="@deva/app-header"></application>    
     </header>
   
     <route path="app1">
@@ -90,7 +94,7 @@
       <route default>
         <application name="@deva/app-footer"></application>
       </route>
-    </footer>
+    </footer> -->
   </main>
   <script>
     System.import('@deva/root-config');
