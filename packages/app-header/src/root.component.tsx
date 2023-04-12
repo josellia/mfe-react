@@ -1,3 +1,13 @@
+//@ts-ignore
+import { Navigate } from "@deva/util-ui";
+
+
 export default function Root(props) {
-  return <section>{props.name} i'am header!</section>;
+  return (
+  <section>
+    teste
+    <Navigate>Funfa</Navigate>
+  </section>
+
+  ) 
 }
