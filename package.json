@@ -7,9 +7,6 @@
     "serve": "lerna run --parallel serve",
     "deploy": "lerna run deploy"
    },
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "lerna": "^6.6.1"
   }
