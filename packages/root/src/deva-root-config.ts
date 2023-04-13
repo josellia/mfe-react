@@ -15,7 +15,7 @@ registerApplication({
     System.import<LifeCycles>(
       "@deva/app-footer"
     ),
-  activeWhen: ["/"],
+  activeWhen: [""],
 });
 
 registerApplication({
